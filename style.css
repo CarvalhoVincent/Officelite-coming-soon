@@ -73,7 +73,8 @@ body {
     font-size: var(--fs-4);
     font-weight: 700;
     color: hsl( var(--clr-grey) );
-    background-color: #FAFAFA;
+    background: linear-gradient(#FAFAFA 65%, #25293A 0%);
+    
     min-height: 100vh;
     
     display: grid;
@@ -154,6 +155,8 @@ select {
 .text-almostBlack { color: hsl( var(--clr-almostBlack) );}
 .text-grey { color: hsl( var(--clr-grey) );}
 .text-blue { color: hsl( var(--clr-blue) );}
+.text-almostWhite { color: white ; opacity: .75;}
+.text-white { color: white ;}
 
 /* typography */
 
@@ -272,18 +275,87 @@ select {
     margin-inline: 1.5rem;
 }
 
+.card > h2 {
+    padding-top: 2.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.card > h3 {
+    margin-bottom: .5rem;
+}
+
+.card > .description {
+    margin-top: 3.5rem;
+    margin-bottom: 1rem;
+}
+
+.card > .storage {
+    margin-bottom: 1rem;
+}
+
+.card > button {
+    margin-top: 2rem;
+    margin-bottom: 2.5rem;
+    width: 171px;
+    height: 56px;
+    border-radius: 28px;
+    border: none;
+    cursor: pointer;
+}
+
+.card > button:active {
+    transform: translateY(2px);
+}
+
 .card1, .card2, .card3 {
     text-align: center;
+    border-radius: 13px;
+    padding-inline: 3.3125rem;
+    margin-bottom: 2rem;
 }
 
 .card1 {
-
+    background-color: white;
 }
 
 .card2 {
-
+    background-color: hsl( var(--clr-blue) );
+    background-image: url(./assets/home/bg-pattern-pricing.svg);
+    background-position: center 102% ;
+    background-repeat: no-repeat;
 }
 
 .card3 {
+    background-color: white;
+}
 
+.card1 > button, .card3 > button {
+    color: hsl( var(--clr-blue) );
+    background-color: hsl( var(--clr-blue) / .15 );
+}
+
+.card1 > button:hover , .card3 > button:hover {
+    background-color: hsl( var(--clr-blue) / .35 );
+}
+
+.card2 button {
+    color: hsl( var(--clr-blue) );
+    background-color: white;
+    z-index: 1000;
+}
+
+.card2 > button:hover {
+    color: hsl( var(--clr-lightBlue) );
+}
+
+
+
+
+
+
+
+.footer {
+    background-image: url(./assets/home/bg-pattern-footer.svg);
+    background-position: center 20% ;
+    background-repeat: no-repeat;
 }
